@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Text Filter</title>
+    <title>Product Filter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
 
-        <h2>Text Filter</h2>
-        <p>Enter text and a keyword to filter.</p>
+        <h2>Product Filter</h2>
 
-        <textarea id="textInput" placeholder="Enter text here..."></textarea>
+        <label>Select Category:</label>
+        <select id="category">
+            <option value="all">All</option>
+            <option value="clothes">Clothes</option>
+            <option value="electronics">Electronics</option>
+        </select>
 
-        <input type="text" id="keyword" placeholder="Enter word to filter">
+        <button onclick="filterProducts()">Filter</button>
 
-        <button onclick="filterText()">Filter</button>
+        <ul id="productList">
+            <li data-type="clothes">Shirt</li>
+            <li data-type="clothes">Jeans</li>
+            <li data-type="clothes">Jacket</li>
 
-        <div id="result"></div>
+            <li data-type="electronics">Mobile Phone</li>
+            <li data-type="electronics">Laptop</li>
+            <li data-type="electronics">Headphones</li>
+        </ul>
 
         <a href="index.html">← Back to Home</a>
 
