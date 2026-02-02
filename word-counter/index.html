@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Word Counter</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2>Word Counter</h2>
-    <p>This page contains the word counter tool.</p>
+    <div class="container">
 
-    <a href="index.html">← Back to Home</a>
+        <h2>Word Counter</h2>
+        <p>Type text to count words and characters.</p>
 
+        <textarea id="textBox" placeholder="Type here..."></textarea>
+
+        <p>
+            Words: <span id="wordCount">0</span><br>
+            Characters: <span id="charCount">0</span>
+        </p>
+
+        <a href="index.html">← Back to Home</a>
+
+    </div>
+
+    <script src="word-counter.js"></script>
 </body>
 </html>
