@@ -1,15 +1,14 @@
-function filterText() {
-    const text = document.getElementById("textInput").value;
-    const keyword = document.getElementById("keyword").value.trim();
-    const resultDiv = document.getElementById("result");
+function filterProducts() {
+    const selected = document.getElementById("category").value;
+    const products = document.querySelectorAll("#productList li");
 
-    if (keyword === "") {
-        resultDiv.innerHTML = "Please enter a word to filter.";
-        return;
+    for (let i = 0; i < products.length; i++) {
+        const type = products[i].getAttribute("data-type");
+
+        if (selected === "all" || type === selected) {
+            products[i].style.display = "list-item";
+        } else {
+            products[i].style.display = "none";
+        }
     }
-
-    const regex = new RegExp(`(${keyword})`, "gi");
-    const filteredText = text.replace(regex, "<strong>$1</strong>");
-
-    resultDiv.innerHTML = filteredText;
 }
